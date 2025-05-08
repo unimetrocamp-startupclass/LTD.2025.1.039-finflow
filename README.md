@@ -1,139 +1,140 @@
-# 💰 FinFlow – Gerenciador Financeiro
+# Gerenciador Financeiro
 
-## 📘 Descrição
-O **FinFlow** é um sistema web moderno e responsivo para controle de finanças pessoais, desenvolvido para simplificar o registro e acompanhamento de receitas e despesas. Com uma interface intuitiva, o sistema permite visualizar o fluxo financeiro de forma clara e eficiente.
+## Descrição
+Sistema web para gerenciamento de finanças pessoais, desenvolvido com React, TypeScript e Tailwind CSS. Permite o controle de receitas e despesas, visualização de relatórios e análise de gastos por categoria.
 
----
+## Índice
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias](#tecnologias)
+- [Arquitetura](#arquitetura)
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Estrutura de Dados](#estrutura-de-dados)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
 
-## 🧭 Índice
-- [📘 Descrição](#-descrição)
-- [🚀 Introdução](#-introdução)
-- [🧱 Arquitetura do Sistema](#-arquitetura-do-sistema)
-- [🛠️ Funcionalidades](#️-funcionalidades)
-- [💻 Requisitos Técnicos](#-requisitos-técnicos)
-- [📦 Instalação](#-instalação)
-- [⚙️ Configuração](#️-configuração)
-- [▶️ Uso](#️-uso)
-- [🔧 Manutenção](#-manutenção)
-- [👥 Equipe](#-equipe)
-- [🤝 Contribuição](#-contribuição)
-- [📄 Licença](#-licença)
+## Funcionalidades
+- ✅ Registro de receitas e despesas
+- 📊 Gráfico de distribuição de gastos
+- 🔍 Pesquisa e filtragem de transações
+- 📅 Análise mensal de gastos
+- 🌓 Tema claro/escuro
+- 📱 Interface responsiva
+- 💾 Persistência local de dados
+- 🔔 Notificações de ações
 
----
+## Tecnologias
+- React 18.3.1
+- TypeScript
+- Tailwind CSS
+- Vite
+- Lucide React (ícones)
+- React Hot Toast (notificações)
+- Recharts (gráficos)
 
-## 🚀 Introdução
-O **FinFlow** foi desenvolvido para ajudar pessoas a manterem o controle de suas finanças pessoais. Com ele, é possível registrar entradas e saídas, acompanhar o saldo total e manter uma visão organizada de todas as transações.
+## Arquitetura
 
----
+### Estrutura de Diretórios
+```
+src/
+├── models/          # Classes e interfaces
+├── docs/           # Documentação
+├── components/     # Componentes React
+└── styles/        # Estilos CSS
+```
 
-## 🧱 Arquitetura do Sistema
-O sistema segue uma arquitetura **Single Page Application (SPA)** com as seguintes tecnologias:
+### Modelagem de Dados
+O sistema utiliza três entidades principais:
+- **Transaction**: Registros de receitas e despesas
+- **User**: Informações do usuário
+- **Category**: Categorias de transações
 
-- ⚛️ React `18.3.1`
-- 🟦 TypeScript
-- 🎨 Tailwind CSS
-- ⚡ Vite
-- ✨ Lucide React (ícones)
+Para mais detalhes, consulte o [Diagrama ER](docs/DER.md).
 
----
-
-## 🛠️ Funcionalidades
-
-- ✅ Registro de **receitas** e **despesas**
-- ✅ Cálculo automático do **saldo total**
-- ✅ Visualização clara do **histórico de transações**
-- ✅ Exclusão de transações
-- ✅ Interface **responsiva** e **amigável**
-- ✅ **Validação** de dados de entrada
-
----
-
-## 💻 Requisitos Técnicos
-
-- Node.js `>=16.0.0`
-- NPM `>=7.0.0`
-- Navegador moderno (Chrome, Firefox, Safari ou Edge)
-
----
-
-## 📦 Instalação
+## Instalação
 
 ```bash
 # Clone o repositório
-git clone https://github.com/unimetrocamp-startupclass/finflow.git
+git clone https://github.com/seu-usuario/gerenciador-financeiro.git
 
-# Acesse o diretório do projeto
-cd finflow
+# Acesse o diretório
+cd gerenciador-financeiro
 
 # Instale as dependências
 npm install
-```
 
----
-
-## ⚙️ Configuração
-Nenhuma configuração adicional é necessária. Todas as dependências estão listadas no `package.json`.
-
----
-
-## ▶️ Uso
-
-```bash
-# Iniciar o sistema em modo desenvolvimento
+# Inicie o servidor de desenvolvimento
 npm run dev
-
-# Criar build de produção
-npm run build
-
-# Visualizar a build localmente
-npm run preview
 ```
 
----
+## Uso
 
-## 🔧 Manutenção
+### Adicionar Transação
+1. Preencha a descrição
+2. Informe o valor
+3. Selecione o tipo (receita/despesa)
+4. Escolha a categoria
+5. Clique em "Adicionar"
 
-```bash
-# Atualizar o projeto
-git pull origin main
-npm install
+### Visualizar Relatórios
+- Use o gráfico de pizza para análise de gastos
+- Selecione mês/ano para análise temporal
+- Utilize a barra de pesquisa para filtrar transações
+
+### Temas
+- Alterne entre tema claro/escuro no botão superior direito
+
+## Estrutura de Dados
+
+### Transaction
+```typescript
+{
+  id: UUID
+  description: string
+  amount: number
+  type: 'income' | 'expense'
+  category: string
+  date: Date
+  user_id: UUID
+}
 ```
 
----
+### User
+```typescript
+{
+  id: UUID
+  email: string
+  name: string
+  created_at: Date
+}
+```
 
-## 👥 Equipe
+### Category
+```typescript
+{
+  id: UUID
+  name: string
+  type: 'income' | 'expense'
+  user_id: UUID
+}
+```
 
-Desenvolvido com dedicação por:
+## Contribuição
 
-- Leonardo Hideki
-- Thiago Moscatini
-- Daniel Servino
-- Pedro Marques
-- Wellington José
+### Processo
+1. Fork o repositório
+2. Crie uma branch (`git checkout -b feature/nova-funcionalidade`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para a branch (`git push origin feature/nova-funcionalidade`)
+5. Abra um Pull Request
 
----
+### Padrões
+- Use TypeScript
+- Siga as regras do ESLint
+- Mantenha a formatação do Prettier
+- Escreva testes para novas funcionalidades
+- Mantenha os componentes React pequenos e focados
+- Use Tailwind CSS para estilização
 
-## 🤝 Contribuição
-
-Contribuições são bem-vindas! Para colaborar:
-
-1. Faça um **fork** do projeto
-2. Crie uma **branch**: `git checkout -b feature/nova-funcionalidade`
-3. Faça seu commit: `git commit -m 'feat: adiciona nova funcionalidade'`
-4. Envie para o repositório remoto: `git push origin feature/nova-funcionalidade`
-5. Abra um **Pull Request**
-
-### 📏 Padrões de Código
-
-- Use **TypeScript** para todo código novo
-- Siga as regras do **ESLint**
-- Mantenha a formatação com **Prettier**
-- Escreva **testes** para novas funcionalidades
-- Mantenha os componentes **pequenos e reutilizáveis**
-- Utilize **Tailwind CSS** para estilos
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença **MIT**. Veja o arquivo [`LICENSE`](LICENSE) para mais informações.
+## Licença
+Este projeto está licenciado sob a MIT License. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
