@@ -1,57 +1,51 @@
 # Gerenciador Financeiro
 
-## Descrição
-Sistema web para gerenciamento de finanças pessoais, desenvolvido com React, TypeScript e Tailwind CSS. Permite o controle de receitas e despesas, visualização de relatórios e análise de gastos por categoria.
+Um sistema web moderno e intuitivo para gerenciamento de finanças pessoais, desenvolvido com React, TypeScript e Tailwind CSS. Oferece uma interface elegante e responsiva para controle de receitas, despesas e análise financeira.
 
-## Índice
-- [Funcionalidades](#funcionalidades)
-- [Tecnologias](#tecnologias)
-- [Arquitetura](#arquitetura)
-- [Instalação](#instalação)
-- [Uso](#uso)
-- [Estrutura de Dados](#estrutura-de-dados)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
+## 🌟 Funcionalidades
 
-## Funcionalidades
+### Gestão Financeira
 - ✅ Registro de receitas e despesas
-- 📊 Gráfico de distribuição de gastos
-- 🔍 Pesquisa e filtragem de transações
-- 📅 Análise mensal de gastos
-- 🌓 Tema claro/escuro
-- 📱 Interface responsiva
-- 💾 Persistência local de dados
-- 🔔 Notificações de ações
+- 📊 Gráficos interativos de distribuição de gastos
+- 🏷️ Sistema de categorias personalizáveis
+- 💰 Cálculo automático de saldo total e mensal
+- 🔍 Busca avançada com múltiplos filtros
 
-## Tecnologias
-- React 18.3.1
+### Categorização
+- 🎨 Cores personalizáveis para categorias
+- 📋 Categorias padrão pré-configuradas
+- 🔄 Gestão flexível de categorias
+
+### Relatórios e Exportação
+- 📑 Exportação para PDF
+- 📊 Exportação para Excel
+- 📈 Análise mensal detalhada
+- 📉 Visualização de tendências
+
+### Interface
+- 🌓 Tema claro/escuro
+- 📱 Design totalmente responsivo
+- 🔔 Sistema de notificações
+- 🎯 Interface intuitiva e moderna
+
+### Segurança
+- 🔐 Criptografia de dados local
+- 🛡️ Visualizador de criptografia integrado
+- 💾 Persistência segura de dados
+
+## 🛠️ Tecnologias
+
+- React 18.3
 - TypeScript
 - Tailwind CSS
 - Vite
+- Recharts (gráficos)
+- jsPDF (exportação PDF)
+- XLSX (exportação Excel)
 - Lucide React (ícones)
 - React Hot Toast (notificações)
-- Recharts (gráficos)
 
-## Arquitetura
-
-### Estrutura de Diretórios
-```
-src/
-├── models/          # Classes e interfaces
-├── docs/           # Documentação
-├── components/     # Componentes React
-└── styles/        # Estilos CSS
-```
-
-### Modelagem de Dados
-O sistema utiliza três entidades principais:
-- **Transaction**: Registros de receitas e despesas
-- **User**: Informações do usuário
-- **Category**: Categorias de transações
-
-Para mais detalhes, consulte o [Diagrama ER](docs/DER.md).
-
-## Instalação
+## 🚀 Instalação
 
 ```bash
 # Clone o repositório
@@ -67,59 +61,59 @@ npm install
 npm run dev
 ```
 
-## Uso
+## 💻 Uso
 
 ### Adicionar Transação
-1. Preencha a descrição
+1. Preencha a descrição da transação
 2. Informe o valor
 3. Selecione o tipo (receita/despesa)
-4. Escolha a categoria
-5. Clique em "Adicionar"
+4. Escolha ou crie uma categoria
+5. Confirme a adição
 
-### Visualizar Relatórios
-- Use o gráfico de pizza para análise de gastos
-- Selecione mês/ano para análise temporal
-- Utilize a barra de pesquisa para filtrar transações
+### Gerenciar Categorias
+1. Clique em "Nova" ao lado do campo de categoria
+2. Defina um nome para a categoria
+3. Escolha o tipo (receita/despesa)
+4. Selecione uma cor personalizada
+5. Confirme a criação
 
-### Temas
+### Filtros Avançados
+- Pesquisa por texto
+- Filtro por data
+- Filtro por valor
+- Seleção de categorias
+- Tipo de transação
+
+### Exportação
+- Clique no botão "PDF" para relatório em PDF
+- Clique no botão "Excel" para planilha detalhada
+
+### Tema
 - Alterne entre tema claro/escuro no botão superior direito
 
-## Estrutura de Dados
+## 📊 Estrutura de Dados
 
 ### Transaction
 ```typescript
 {
-  id: UUID
   description: string
   amount: number
   type: 'income' | 'expense'
   category: string
   date: Date
-  user_id: UUID
-}
-```
-
-### User
-```typescript
-{
-  id: UUID
-  email: string
-  name: string
-  created_at: Date
 }
 ```
 
 ### Category
 ```typescript
 {
-  id: UUID
   name: string
   type: 'income' | 'expense'
-  user_id: UUID
+  color: string
 }
 ```
 
-## Contribuição
+## 🤝 Contribuição
 
 ### Processo
 1. Fork o repositório
@@ -133,8 +127,9 @@ npm run dev
 - Siga as regras do ESLint
 - Mantenha a formatação do Prettier
 - Escreva testes para novas funcionalidades
-- Mantenha os componentes React pequenos e focados
 - Use Tailwind CSS para estilização
+- Mantenha os componentes React pequenos e focados
 
-## Licença
+## 📝 Licença
+
 Este projeto está licenciado sob a MIT License. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
