@@ -41,7 +41,15 @@ function App() {
   const [newCategoryColor, setNewCategoryColor] = useState('#4CAF50');
 
   useEffect(() => {
+    loadTransactions();
+  }, []);
+
+  const loadTransactions = async () => {
+    await manager.loadTransactions();
     setTransactions(manager.getTransactions());
+  };
+
+  useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
     } else {
@@ -54,7 +62,7 @@ function App() {
     localStorage.setItem('darkMode', (!isDarkMode).toString());
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!description || !amount || !category) {
@@ -69,11 +77,16 @@ function App() {
       category
     );
 
-    manager.addTransaction(transaction);
-    setTransactions(manager.getTransactions());
-    setDescription('');
-    setAmount('');
-    toast.success('Transação adicionada com sucesso!');
+    try {
+      await manager.addTransaction(transaction);
+      await loadTransactions();
+      setDescription('');
+      setAmount('');
+      toast.success('Transação adicionada com sucesso!');
+    } catch (error) {
+      console.error('Erro ao adicionar transação:', error);
+      toast.error('Erro ao adicionar transação. Tente novamente.');
+    }
   };
 
   const handleAddCategory = (e: React.FormEvent) => {
@@ -90,10 +103,15 @@ function App() {
     toast.success('Categoria adicionada com sucesso!');
   };
 
-  const handleDelete = (index: number) => {
-    manager.removeTransaction(index);
-    setTransactions(manager.getTransactions());
-    toast.success('Transação removida com sucesso!');
+  const handleDelete = async (index: number) => {
+    try {
+      await manager.removeTransaction(index);
+      await loadTransactions();
+      toast.success('Transação removida com sucesso!');
+    } catch (error) {
+      console.error('Erro ao remover transação:', error);
+      toast.error('Erro ao remover transação. Tente novamente.');
+    }
   };
 
   const handleSearch = (query: string) => {
@@ -237,7 +255,9 @@ function App() {
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">
               <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Nova Categoria</h3>
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+                  Nova Categoria
+                </h3>
                 <button
                   onClick={() => setIsAddingCategory(false)}
                   className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
@@ -254,7 +274,7 @@ function App() {
                     type="text"
                     value={newCategoryName}
                     onChange={(e) => setNewCategoryName(e.target.value)}
-                    className="w-full p-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md focus:ring-2 focus:ring-blue-500"
+                    className="w-full p-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md"
                     placeholder="Ex: Academia, Streaming"
                   />
                 </div>
@@ -265,7 +285,7 @@ function App() {
                   <select
                     value={newCategoryType}
                     onChange={(e) => setNewCategoryType(e.target.value as 'income' | 'expense')}
-                    className="w-full p-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md focus:ring-2 focus:ring-blue-500"
+                    className="w-full p-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md"
                   >
                     <option value="income">Receita</option>
                     <option value="expense">Despesa</option>
@@ -286,13 +306,13 @@ function App() {
                   <button
                     type="button"
                     onClick={() => setIsAddingCategory(false)}
-                    className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors"
+                    className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md"
                   >
                     Cancelar
                   </button>
                   <button
                     type="submit"
-                    className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                    className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
                   >
                     Adicionar
                   </button>
