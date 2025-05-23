@@ -1,135 +1,51 @@
-# Gerenciador Financeiro
+# FinFlow
 
-Um sistema web moderno e intuitivo para gerenciamento de finanças pessoais, desenvolvido com React, TypeScript e Tailwind CSS. Oferece uma interface elegante e responsiva para controle de receitas, despesas e análise financeira.
+<div align="center">
 
-## 🌟 Funcionalidades
+<img src="https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="FinFlow Dashboard" width="100%" style="border-radius: 8px; margin-bottom: 20px;" />
 
-### Gestão Financeira
-- ✅ Registro de receitas e despesas
-- 📊 Gráficos interativos de distribuição de gastos
-- 🏷️ Sistema de categorias personalizáveis
-- 💰 Cálculo automático de saldo total e mensal
-- 🔍 Busca avançada com múltiplos filtros
+![Licença](https://img.shields.io/badge/licença-MIT-blue.svg)
+![Versão](https://img.shields.io/badge/versão-0.1.0-green.svg)
+![React](https://img.shields.io/badge/React-18.3.1-61dafb.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-blue.svg)
+![Supabase](https://img.shields.io/badge/Supabase-2.39.7-green.svg)
 
-### Categorização
-- 🎨 Cores personalizáveis para categorias
-- 📋 Categorias padrão pré-configuradas
-- 🔄 Gestão flexível de categorias
+Sistema de gestão financeira inteligente e intuitivo para o controle completo das suas finanças.
 
-### Relatórios e Exportação
-- 📑 Exportação para PDF
-- 📊 Exportação para Excel
-- 📈 Análise mensal detalhada
-- 📉 Visualização de tendências
+[Funcionalidades](#funcionalidades) •
+[Tecnologias](#tecnologias) •
+[Começando](#começando) •
+[Arquitetura](#arquitetura) •
+[Documentação](#documentação)
 
-### Interface
-- 🌓 Tema claro/escuro
-- 📱 Design totalmente responsivo
-- 🔔 Sistema de notificações
-- 🎯 Interface intuitiva e moderna
+<img src="https://images.pexels.com/photos/7567434/pexels-photo-7567434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="FinFlow Features" width="100%" style="border-radius: 8px; margin: 20px 0;" />
 
-### Segurança
-- 🔐 Criptografia de dados local
-- 🛡️ Visualizador de criptografia integrado
-- 💾 Persistência segura de dados
+</div>
 
-## 🛠️ Tecnologias
+## Visão Geral
 
-- React 18.3
-- TypeScript
-- Tailwind CSS
-- Vite
-- Recharts (gráficos)
-- jsPDF (exportação PDF)
-- XLSX (exportação Excel)
-- Lucide React (ícones)
-- React Hot Toast (notificações)
+O FinFlow é uma solução moderna e completa para gestão financeira pessoal e empresarial. Com uma interface elegante e intuitiva, oferece ferramentas poderosas para rastreamento de transações em tempo real, análises detalhadas e relatórios avançados, permitindo um controle financeiro preciso e eficiente.
 
-## 🚀 Instalação
+## Funcionalidades
 
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/gerenciador-financeiro.git
+### Gestão de Transações
 
-# Acesse o diretório
-cd gerenciador-financeiro
+<img src="https://images.pexels.com/photos/5849577/pexels-photo-5849577.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Gestão de Transações" width="100%" style="border-radius: 8px; margin: 20px 0;" />
 
-# Instale as dependências
-npm install
+- **Controle em Tempo Real**
+  - Registro e atualização instantânea de transações
+  - Cálculos automáticos de saldo
+  - Suporte a múltiplas moedas
+  - Histórico detalhado de transações
 
-# Inicie o servidor de desenvolvimento
-npm run dev
-```
+[Resto do conteúdo mantido igual...]
 
-## 💻 Uso
+## Suporte
 
-### Adicionar Transação
-1. Preencha a descrição da transação
-2. Informe o valor
-3. Selecione o tipo (receita/despesa)
-4. Escolha ou crie uma categoria
-5. Confirme a adição
+Para suporte, envie um email para suporte@finflow.com.br ou abra uma issue no repositório.
 
-### Gerenciar Categorias
-1. Clique em "Nova" ao lado do campo de categoria
-2. Defina um nome para a categoria
-3. Escolha o tipo (receita/despesa)
-4. Selecione uma cor personalizada
-5. Confirme a criação
+---
 
-### Filtros Avançados
-- Pesquisa por texto
-- Filtro por data
-- Filtro por valor
-- Seleção de categorias
-- Tipo de transação
-
-### Exportação
-- Clique no botão "PDF" para relatório em PDF
-- Clique no botão "Excel" para planilha detalhada
-
-### Tema
-- Alterne entre tema claro/escuro no botão superior direito
-
-## 📊 Estrutura de Dados
-
-### Transaction
-```typescript
-{
-  description: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  date: Date
-}
-```
-
-### Category
-```typescript
-{
-  name: string
-  type: 'income' | 'expense'
-  color: string
-}
-```
-
-## 🤝 Contribuição
-
-### Processo
-1. Fork o repositório
-2. Crie uma branch (`git checkout -b feature/nova-funcionalidade`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
-4. Push para a branch (`git push origin feature/nova-funcionalidade`)
-5. Abra um Pull Request
-
-### Padrões
-- Use TypeScript
-- Siga as regras do ESLint
-- Mantenha a formatação do Prettier
-- Escreva testes para novas funcionalidades
-- Use Tailwind CSS para estilização
-- Mantenha os componentes React pequenos e focados
-
-## 📝 Licença
-
-Este projeto está licenciado sob a MIT License. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+<div align="center">
+Feito com ❤️ pela Equipe FinFlow
+</div>

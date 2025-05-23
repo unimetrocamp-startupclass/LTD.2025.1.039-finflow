@@ -1,5 +1,5 @@
 import { Transaction } from './Transaction';
-import { CryptoManager } from './CryptoManager';
+import { supabase } from '../lib/supabase';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import * as XLSX from 'xlsx';
@@ -19,28 +19,8 @@ export class TransactionManager {
   private categories: { name: string; type: 'income' | 'expense'; color: string }[] = [];
 
   constructor() {
-    this.loadFromLocalStorage();
     this.loadCategories();
-  }
-
-  private async loadFromLocalStorage(): Promise<void> {
-    const saved = localStorage.getItem('transactions');
-    if (saved) {
-      try {
-        const decrypted = await CryptoManager.decrypt(saved);
-        const data = JSON.parse(decrypted);
-        this.transactions = data.map((t: any) => new Transaction(
-          t.description,
-          t.amount,
-          t.type,
-          t.category,
-          new Date(t.date)
-        ));
-      } catch (error) {
-        console.error('Erro ao carregar transações:', error);
-        this.transactions = [];
-      }
-    }
+    this.loadTransactions();
   }
 
   private loadCategories(): void {
@@ -48,7 +28,6 @@ export class TransactionManager {
     if (savedCategories) {
       this.categories = JSON.parse(savedCategories);
     } else {
-      // Default categories
       this.categories = [
         { name: 'Salário', type: 'income', color: '#4CAF50' },
         { name: 'Investimentos', type: 'income', color: '#2196F3' },
@@ -64,18 +43,24 @@ export class TransactionManager {
     }
   }
 
-  private async saveToLocalStorage(): Promise<void> {
-    try {
-      const encrypted = await CryptoManager.encrypt(JSON.stringify(this.transactions));
-      localStorage.setItem('transactions', encrypted);
-    } catch (error) {
-      console.error('Erro ao salvar transações:', error);
-      throw new Error('Falha ao salvar as transações');
-    }
-  }
-
   private saveCategories(): void {
     localStorage.setItem('categories', JSON.stringify(this.categories));
+  }
+
+  async loadTransactions(): Promise<void> {
+    const { data, error } = await supabase
+      .from('transactions')
+      .select('*')
+      .order('date', { ascending: false });
+
+    if (error) {
+      console.error('Erro ao carregar transações:', error);
+      return;
+    }
+
+    this.transactions = await Promise.all(
+      data.map(t => Transaction.fromSupabase(t))
+    );
   }
 
   addCategory(name: string, type: 'income' | 'expense', color: string): void {
@@ -98,14 +83,17 @@ export class TransactionManager {
     return this.categories.filter(c => c.type === type);
   }
 
-  addTransaction(transaction: Transaction): void {
-    this.transactions.push(transaction);
-    this.saveToLocalStorage();
+  async addTransaction(transaction: Transaction): Promise<void> {
+    await transaction.save();
+    await this.loadTransactions();
   }
 
-  removeTransaction(index: number): void {
-    this.transactions.splice(index, 1);
-    this.saveToLocalStorage();
+  async removeTransaction(index: number): Promise<void> {
+    const transaction = this.transactions[index];
+    if (transaction) {
+      await transaction.delete();
+      await this.loadTransactions();
+    }
   }
 
   getTransactions(): Transaction[] {
@@ -181,15 +169,12 @@ export class TransactionManager {
     const doc = new jsPDF();
     const total = this.getTotal();
 
-    // Título
     doc.setFontSize(20);
     doc.text('Relatório Financeiro', 14, 20);
 
-    // Saldo total
     doc.setFontSize(14);
     doc.text(`Saldo Total: R$ ${total.toFixed(2)}`, 14, 30);
 
-    // Tabela de transações
     const tableData = this.transactions.map(t => [
       new Date(t.date).toLocaleDateString('pt-BR'),
       t.description,
@@ -206,7 +191,6 @@ export class TransactionManager {
       headStyles: { fillColor: [66, 139, 202] }
     });
 
-    // Download do PDF
     doc.save('relatorio-financeiro.pdf');
   }
 
@@ -223,17 +207,15 @@ export class TransactionManager {
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'Transações');
 
-    // Ajustar largura das colunas
     const colWidths = [
-      { wch: 12 }, // Data
-      { wch: 30 }, // Descrição
-      { wch: 15 }, // Categoria
-      { wch: 10 }, // Tipo
-      { wch: 12 }  // Valor
+      { wch: 12 },
+      { wch: 30 },
+      { wch: 15 },
+      { wch: 10 },
+      { wch: 12 }
     ];
     ws['!cols'] = colWidths;
 
-    // Download do Excel
     XLSX.writeFile(wb, 'relatorio-financeiro.xlsx');
   }
 }

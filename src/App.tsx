@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { PlusCircle, Trash2, Search, Calendar, Moon, Sun, PieChart, Plus, X, FileDown, Lock } from 'lucide-react';
+import { PlusCircle, Trash2, Search, Calendar, Moon, Sun, PieChart, Plus, X, FileDown } from 'lucide-react';
 import { Transaction } from './models/Transaction';
 import { TransactionManager } from './models/TransactionManager';
 import { Toaster, toast } from 'react-hot-toast';
 import { PieChart as RechartsChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
-import { CryptoViewer } from './components/CryptoViewer';
 
 interface SearchFilters {
   query: string;
@@ -40,8 +39,6 @@ function App() {
   const [newCategoryName, setNewCategoryName] = useState('');
   const [newCategoryType, setNewCategoryType] = useState<'income' | 'expense'>('expense');
   const [newCategoryColor, setNewCategoryColor] = useState('#4CAF50');
-  const [showCryptoViewer, setShowCryptoViewer] = useState(false);
-  const [encryptedData, setEncryptedData] = useState<string>('');
 
   useEffect(() => {
     setTransactions(manager.getTransactions());
@@ -51,12 +48,6 @@ function App() {
       document.documentElement.classList.remove('dark');
     }
   }, [isDarkMode]);
-
-  // Novo useEffect para atualizar os dados criptografados
-  useEffect(() => {
-    const rawData = localStorage.getItem('transactions') || '';
-    setEncryptedData(rawData);
-  }, [transactions]); // Atualiza quando as transações mudam
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -145,25 +136,16 @@ function App() {
           <h1 className="text-2xl font-bold text-center text-gray-800 dark:text-white">
             Gerenciador Financeiro
           </h1>
-          <div className="flex gap-2">
-            <button
-              onClick={() => setShowCryptoViewer(true)}
-              className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-              title="Visualizar Criptografia"
-            >
-              <Lock className={isDarkMode ? "text-white" : "text-gray-800"} size={24} />
-            </button>
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-            >
-              {isDarkMode ? (
-                <Sun className="text-white" size={24} />
-              ) : (
-                <Moon className="text-gray-800" size={24} />
-              )}
-            </button>
-          </div>
+          <button
+            onClick={toggleDarkMode}
+            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          >
+            {isDarkMode ? (
+              <Sun className="text-white" size={24} />
+            ) : (
+              <Moon className="text-gray-800" size={24} />
+            )}
+          </button>
         </div>
 
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6 mb-6 animate-fade-in">
@@ -598,13 +580,6 @@ function App() {
             )}
           </div>
         </div>
-
-        {showCryptoViewer && (
-          <CryptoViewer
-            onClose={() => setShowCryptoViewer(false)}
-            rawData={encryptedData}
-          />
-        )}
       </div>
     </div>
   );
