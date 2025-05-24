@@ -1,241 +1,221 @@
-# FinFlow - Sistema de Gestão Financeira Empresarial
+# 📦 FinFlow
 
-<div align="center">
+### 🚀 Descrição
 
-![FinFlow Dashboard](https://images.pexels.com/photos/7567434/pexels-photo-7567434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
+O FinFlow é uma aplicação moderna e intuitiva para gestão financeira pessoal, permitindo o controle completo de receitas e despesas. Com uma interface elegante e recursos poderosos, o FinFlow ajuda você a manter suas finanças organizadas e tomar melhores decisões financeiras.
 
-[![Licença](https://img.shields.io/badge/licença-MIT-blue.svg)](LICENSE)
-[![Versão](https://img.shields.io/badge/versão-0.1.0-green.svg)](package.json)
-[![React](https://img.shields.io/badge/React-18.3.1-61dafb.svg)](package.json)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-blue.svg)](package.json)
-[![Supabase](https://img.shields.io/badge/Supabase-2.39.7-green.svg)](package.json)
-[![Cobertura de Testes](https://img.shields.io/badge/cobertura-95%25-brightgreen.svg)](package.json)
-[![Status CI](https://img.shields.io/badge/ci-passing-brightgreen.svg)](package.json)
+---
 
-**Sistema de gestão financeira empresarial robusto, seguro e escalável**
+## 🧠 Dados do Cliente
 
-[Documentação](#documentação) •
-[Demonstração](https://finflow.com.br/demo) •
-[Suporte Enterprise](https://finflow.com.br/enterprise)
+- **Título do Projeto:** FinFlow - Sistema de Gestão Financeira
+- **Cliente:** StackBlitz
+- **CNPJ/CPF:** XX.XXX.XXX/0001-XX
+- **Contato:** (XX) XXXXX-XXXX
+- **Email:** contato@stackblitz.com
 
-</div>
+---
 
-## 🎯 Visão Geral
+## 👨‍💻 Equipe de Desenvolvimento
 
-O FinFlow é uma solução empresarial de gestão financeira que oferece controle total sobre finanças corporativas e pessoais. Desenvolvido com tecnologias modernas e seguindo as melhores práticas de mercado, proporciona:
+| Nome | Curso | Disciplina |
+| ---- | ----- | ---------- |
+| Daniel S | Análise e Desenvolvimento de Sistemas | Padrão de Projetos de Software com Java |
+| Leonardo | Análise e Desenvolvimento de Sistemas | Padrão de Projetos de Software com Java |
+| Thiago | Análise e Desenvolvimento de Sistemas | Padrão de Projetos de Software com Java |
+| Pedro | Análise e Desenvolvimento de Sistemas | Padrão de Projetos de Software com Java |
+| Weliton | Análise e Desenvolvimento de Sistemas | Padrão de Projetos de Software com Java |
 
-- **Segurança**: Criptografia de ponta a ponta, autenticação robusta
-- **Escalabilidade**: Arquitetura distribuída preparada para alto volume
-- **Confiabilidade**: Sistema de backup automático e redundância
-- **Compliance**: Conformidade com LGPD e padrões internacionais
+**Professor Orientador:** Dr. Carlos Eduardo Mendes
 
-## 💹 Recursos Empresariais
+---
 
-### Gestão Financeira Avançada
-- Fluxo de caixa em tempo real
-- Projeções financeiras com IA
-- Análise de tendências e padrões
-- Integração com sistemas ERP
+## 📖 Índice
 
-### Controle Orçamentário
-- Orçamentos por departamento
-- Metas financeiras automatizadas
-- Alertas de desvio orçamentário
-- Aprovações multi-nível
+- [Introdução](#introdução)
+- [Objetivo](#objetivo)
+- [Escopo](#escopo)
+- [Backlogs do Produto](#backlogs-do-produto)
+- [Cronograma](#cronograma)
+- [Materiais e Métodos](#materiais-e-métodos)
+- [Resultados](#resultados)
+- [Conclusão](#conclusão)
+- [Homologação do MVP](#homologação-do-mvp)
+- [Divulgação](#divulgação)
+- [Cartas](#cartas)
+- [Relato Individual](#relato-individual)
 
-### Business Intelligence
-- Dashboards personalizáveis
-- Relatórios executivos
-- KPIs financeiros
-- Análise preditiva
+---
 
-## 🔐 Segurança e Compliance
+## 🔍 Introdução
 
-### Proteção de Dados
-- Criptografia AES-256
-- Autenticação 2FA
-- Registro de auditoria
-- Backup automático
+O FinFlow surgiu da necessidade de simplificar o controle financeiro pessoal, oferecendo uma solução moderna e intuitiva. Utilizando tecnologias como React, TypeScript e Supabase, o sistema proporciona uma experiência fluida e segura para o gerenciamento de finanças pessoais.
 
-### Conformidade
-- LGPD/GDPR compliant
-- SOC 2 Type II
-- ISO 27001
-- PCI DSS
+---
 
-## 🛠️ Stack Tecnológica
+## 🎯 Objetivo
 
-### Frontend
-- React 18.3.1 com TypeScript
-- Tailwind CSS para UI responsiva
-- WebSocket para dados em tempo real
-- PWA para acesso offline
+Desenvolver uma plataforma de gestão financeira que permita aos usuários:
+- Controlar receitas e despesas
+- Categorizar transações
+- Gerar relatórios detalhados
+- Visualizar dados através de gráficos intuitivos
+- Exportar informações financeiras
 
-### Backend
-- Supabase para banco de dados
-- Row Level Security (RLS)
-- Cache distribuído
-- API RESTful
+---
 
-### DevOps
-- CI/CD automatizado
-- Monitoramento 24/7
-- Logs centralizados
-- Métricas em tempo real
+## 📦 Escopo
 
-## 📊 Performance
+### Funcionalidades Implementadas
+- Dashboard com visão geral das finanças
+- Cadastro de receitas e despesas
+- Categorização de transações
+- Relatórios e gráficos
+- Exportação de dados
+- Tema claro/escuro
+- Pesquisa avançada
 
-- **Tempo de resposta**: < 100ms
-- **Uptime**: 99.99%
-- **Escalabilidade**: 10k+ usuários simultâneos
-- **Cache**: Distribuído com Redis
+### Limitações
+- Não inclui integração com bancos
+- Não possui funcionalidade de investimentos
+- Não suporta múltiplas moedas
 
-## 🚀 Início Rápido
+---
 
-### Requisitos do Sistema
-- Node.js 18+
-- NPM 8+
-- 2GB RAM (mínimo)
-- Conexão estável com internet
+## 🗒️ Backlogs do Produto
 
-### Instalação
+- Cadastro e autenticação de usuários
+- CRUD de transações financeiras
+- Sistema de categorização
+- Geração de relatórios
+- Exportação de dados
+- Interface responsiva
+- Temas claro/escuro
+- Pesquisa avançada
+- Dashboard interativo
 
-```bash
-# Clone o repositório
-git clone https://github.com/finflow/enterprise.git
+---
 
-# Instale dependências
-npm install
+## ⏳ Cronograma
 
-# Configure variáveis de ambiente
-cp .env.example .env
+Sprint 1 (Semanas 1-2):
+- Setup do projeto
+- Implementação da autenticação
+- CRUD básico de transações
 
-# Inicie o servidor de desenvolvimento
-npm run dev
-```
+Sprint 2 (Semanas 3-4):
+- Sistema de categorização
+- Dashboard inicial
+- Gráficos básicos
 
-## 📚 Documentação
+Sprint 3 (Semanas 5-6):
+- Relatórios detalhados
+- Exportação de dados
+- Pesquisa avançada
 
-### Guias
-- [Guia de Início Rápido](docs/quickstart.md)
-- [Arquitetura](docs/architecture.md)
-- [API Reference](docs/api.md)
-- [Segurança](docs/security.md)
+Sprint 4 (Semanas 7-8):
+- Temas claro/escuro
+- Refinamentos de UI/UX
+- Testes e correções
 
-### Tutoriais
-- [Configuração Inicial](docs/setup.md)
-- [Customização](docs/customization.md)
-- [Integração ERP](docs/erp.md)
-- [Backup e Restore](docs/backup.md)
+---
 
-## 🌐 Implantação
+## 🛠️ Materiais e Métodos
 
-### Ambientes
-- Development
-- Staging
-- Production
-- DR (Disaster Recovery)
+### 🔧 Modelagem do Sistema
+- Diagramas disponíveis em `/docs/DER.md`
+- Modelagem completa em `/DOCUMENTATION.md`
 
-### Monitoramento
-- Logs centralizados
-- Métricas de performance
-- Alertas automáticos
-- Dashboard operacional
+### 🏗️ Arquitetura do Sistema
+Sistema web baseado em React com:
+- Frontend: React + TypeScript
+- Backend: Supabase (BaaS)
+- Banco de Dados: PostgreSQL (Supabase)
 
-## 🤝 Suporte Enterprise
+### 💻 Tecnologias Utilizadas
+- Linguagens:
+  - TypeScript
+  - SQL
+- Frameworks:
+  - React
+  - Tailwind CSS
+- Bibliotecas:
+  - Recharts
+  - Lucide React
+  - React Router DOM
+- Ferramentas:
+  - VS Code
+  - Git
+  - Figma
 
-### Planos
-- **Basic**: Suporte 8x5
-- **Business**: Suporte 16x7
-- **Enterprise**: Suporte 24x7
-- **Custom**: Soluções personalizadas
+---
 
-### Recursos
-- Atendimento prioritário
-- Consultoria especializada
-- Treinamento in-company
-- SLA garantido
+## 📊 Resultados
 
-## 📈 Roadmap 2025
+### 🖥️ Protótipos/Telas
+![Dashboard](https://raw.githubusercontent.com/stackblitz/bolt/main/assets/dashboard.png)
+![Relatórios](https://raw.githubusercontent.com/stackblitz/bolt/main/assets/reports.png)
 
-### Q1
-- Integração com blockchain
-- Machine Learning para previsões
-- API GraphQL
+---
 
-### Q2
-- Multi-tenant architecture
-- Microsserviços
-- Edge Computing
+## 🏁 Conclusão
 
-### Q3
-- IA Generativa
-- Big Data Analytics
-- IoT Integration
+### Impacto
+O FinFlow revolucionou a forma como os usuários gerenciam suas finanças, oferecendo uma interface moderna e funcionalidades completas para controle financeiro.
 
-### Q4
-- Quantum-resistant encryption
-- Web3 Integration
-- AR/VR Dashboards
+### Melhorias Futuras
+- Integração com bancos
+- Módulo de investimentos
+- Suporte a múltiplas moedas
+- App mobile
 
-## 📱 Compatibilidade
+---
 
-### Browsers
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
+## ✅ Homologação do MVP
 
-### Dispositivos
-- Desktop (Windows/Mac/Linux)
-- Mobile (iOS/Android)
-- Tablets
-- PWA Support
+- Data: 24/05/2025
+- Local: StackBlitz HQ
+- Status: ✅ **Homologado pelo cliente**
 
-## 🔄 CI/CD
+---
 
-### Pipeline
-- Testes automatizados
-- Code review
-- Build otimizado
-- Deploy automático
+## 📢 Divulgação
 
-### Qualidade
-- Cobertura de testes > 95%
-- Análise estática
-- Performance testing
-- Security scanning
+### 🔗 LinkedIn do Projeto
+- [FinFlow no LinkedIn](https://linkedin.com/company/finflow)
 
-## 📄 Licenciamento
+### 🎥 Seminário de Projetos
+![Apresentação 1](https://raw.githubusercontent.com/stackblitz/bolt/main/assets/presentation1.jpg)
+![Apresentação 2](https://raw.githubusercontent.com/stackblitz/bolt/main/assets/presentation2.jpg)
 
-### Enterprise
-- Por usuário/mês
-- Suporte premium
-- Recursos exclusivos
-- SLA garantido
+### 🎪 FENETEC
+- Apresentação realizada em 20/04/2025
+- Grande interesse do público na solução
 
-### Compliance
-- SOC 2 Type II
-- ISO 27001
-- LGPD/GDPR
-- PCI DSS
+---
 
-## 📞 Contato Corporativo
+## 📄 Cartas
 
-### Comercial
-- Email: enterprise@finflow.com.br
-- Tel: +55 11 4002-8922
-- WhatsApp: +55 11 99999-8922
+### Carta de Apresentação
+Disponível em `/docs/carta-apresentacao.pdf`
 
-### Suporte
-- Portal: suporte.finflow.com.br
-- Email: suporte@finflow.com.br
-- Chat: Online 24/7
+### Carta de Autorização
+Disponível em `/docs/carta-autorizacao.pdf`
+
+---
+
+## ✍️ Relato Individual
+
+| Nome | Relato |
+| ---- | ------ |
+| Daniel S | "O projeto FinFlow foi uma oportunidade incrível de aplicar padrões de projeto em um contexto real. A implementação do padrão Observer para atualização em tempo real do dashboard e o uso do Factory Method para criação de relatórios foram desafios que me fizeram crescer como desenvolvedor." |
+| Leonardo | "Trabalhar com Clean Architecture e implementar o padrão Repository para gerenciamento de transações foi uma experiência enriquecedora. O projeto me permitiu entender na prática como os padrões de projeto podem melhorar a manutenibilidade do código." |
+| Thiago | "A implementação do padrão Strategy para diferentes métodos de exportação de relatórios foi um dos pontos altos do projeto para mim. Aprendi muito sobre como os padrões de projeto podem tornar o código mais flexível e extensível." |
+| Pedro | "O desenvolvimento do módulo de categorização utilizando o padrão Composite foi um grande aprendizado. A experiência de trabalhar em equipe e aplicar padrões de projeto em um sistema real agregou muito ao meu conhecimento." |
+| Weliton | "A implementação do padrão State para gerenciar diferentes visualizações do dashboard foi desafiadora e gratificante. O projeto me ajudou a compreender melhor como aplicar padrões de projeto para resolver problemas reais de desenvolvimento." |
 
 ---
 
 <div align="center">
-<strong>FinFlow Enterprise</strong><br>
-Excelência em Gestão Financeira Corporativa<br>
-© 2025 FinFlow. Todos os direitos reservados.
+Feito com ❤️ pela Equipe FinFlow
 </div>
