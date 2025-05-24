@@ -32,18 +32,18 @@ O FinFlow é uma aplicação moderna e intuitiva para gestão financeira pessoal
 
 ## 📖 Índice
 
-- [Introdução](##introdução)
-- [Objetivo](##objetivo)
-- [Escopo](##escopo)
-- [Backlogs do Produto](##backlogs-do-produto)
-- [Cronograma](##cronograma)
-- [Materiais e Métodos](##materiais-e-métodos)
-- [Resultados](##resultados)
-- [Conclusão](##conclusão)
-- [Homologação do MVP](##homologação-do-mvp)
-- [Divulgação](##divulgação)
-- [Cartas](##cartas)
-- [Relato Individual](##relato-individual)
+- [Introdução](#introdução)
+- [Objetivo](#objetivo)
+- [Escopo](#escopo)
+- [Backlogs do Produto](#backlogs-do-produto)
+- [Cronograma](#cronograma)
+- [Materiais e Métodos](#materiais-e-métodos)
+- [Resultados](#resultados)
+- [Conclusão](#conclusão)
+- [Homologação do MVP](#homologação-do-mvp)
+- [Divulgação](#divulgação)
+- [Cartas](#cartas)
+- [Relato Individual](#relato-individual)
 
 ---
 
