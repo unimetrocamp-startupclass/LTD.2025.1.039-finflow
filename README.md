@@ -9,10 +9,10 @@ O FinFlow é uma aplicação moderna e intuitiva para gestão financeira pessoal
 ## 🧠 Dados do Cliente
 
 - **Título do Projeto:** FinFlow - Sistema de Gestão Financeira
-- **Cliente:** StackBlitz
-- **CNPJ/CPF:** XX.XXX.XXX/0001-XX
-- **Contato:** (XX) XXXXX-XXXX
-- **Email:** contato@stackblitz.com
+- **Cliente:** Aline Alves Constantino
+- **CNPJ/CPF:** 112.763.246.93
+- **Contato:** (19) 981014231
+- **Email:** alinereis3240@gmail.com 
 
 ---
 
@@ -26,7 +26,7 @@ O FinFlow é uma aplicação moderna e intuitiva para gestão financeira pessoal
 | Pedro | Análise e Desenvolvimento de Sistemas | Padrão de Projetos de Software com Java |
 | Weliton | Análise e Desenvolvimento de Sistemas | Padrão de Projetos de Software com Java |
 
-**Professor Orientador:** Dr. Carlos Eduardo Mendes
+**Professor Orientador:** Prof. Kesede Rodrigues Julio
 
 ---
 
@@ -153,8 +153,9 @@ Sistema web baseado em React com:
 ## 📊 Resultados
 
 ### 🖥️ Protótipos/Telas
-![Dashboard](https://raw.githubusercontent.com/stackblitz/bolt/main/assets/dashboard.png)
-![Relatórios](https://raw.githubusercontent.com/stackblitz/bolt/main/assets/reports.png)
+![Tela inicial](https://github.com/user-attachments/assets/a08de627-ebde-4dd9-bc04-34d9cc6a611e)
+![Tela de Relatórios](https://github.com/user-attachments/assets/05f452af-a3a1-4865-b5e4-05b22e669b36)
+![Tela de Pesquisa](https://github.com/user-attachments/assets/dccc6a0c-84d0-44ae-9011-b09af409ae49)
 
 ---
 
@@ -182,11 +183,14 @@ O FinFlow revolucionou a forma como os usuários gerenciam suas finanças, ofere
 ## 📢 Divulgação
 
 ### 🔗 LinkedIn do Projeto
-- [FinFlow no LinkedIn](https://linkedin.com/company/finflow)
+- [FinFlow no LinkedIn](#)
 
 ### 🎥 Seminário de Projetos
-![Apresentação 1](https://raw.githubusercontent.com/stackblitz/bolt/main/assets/presentation1.jpg)
-![Apresentação 2](https://raw.githubusercontent.com/stackblitz/bolt/main/assets/presentation2.jpg)
+![Apresentação FinFlow](https://github.com/user-attachments/assets/aeb46f01-10e0-416e-be90-8c654fc8fdf6)
+![Equipe FinFlow](https://github.com/user-attachments/assets/72ae8bb1-1043-418c-88a4-265e24a900d3)
+
+![Foto - lista de presença](https://github.com/user-attachments/assets/01db0664-be9a-4f8f-bb22-e5e2c196093c)
+
 
 ### 🎪 FENETEC
 - Apresentação realizada em 20/04/2025
