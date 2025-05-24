@@ -1,6 +1,5 @@
+![image](https://github.com/user-attachments/assets/052a1d5d-9014-4efd-8dcf-55737872932e)
 ![image](https://github.com/user-attachments/assets/090e5d22-f88d-477f-b671-f50fa63b8f1d)
-
-![LogoUnimetrocamp](https://github.com/user-attachments/assets/55ab0038-7cfb-4812-b1e4-c12b9ab6d5a9)    
 
 # 📦 FinFlow
 
