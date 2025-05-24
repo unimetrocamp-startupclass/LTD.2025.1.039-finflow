@@ -193,7 +193,6 @@ O FinFlow revolucionou a forma como os usuários gerenciam suas finanças, ofere
 
 
 ### 🎪 FENETEC
-- Apresentação realizada em 20/04/2025
 - Grande interesse do público na solução
 
 ---
