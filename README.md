@@ -175,7 +175,7 @@ O FinFlow revolucionou a forma como os usuários gerenciam suas finanças, ofere
 ## ✅ Homologação do MVP
 
 - Data: 24/05/2025
-- Local: StackBlitz HQ
+- Local: Unimetrocamp - Wyden
 - Status: ✅ **Homologado pelo cliente**
 
 ---
