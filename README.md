@@ -32,18 +32,18 @@ O FinFlow é uma aplicação moderna e intuitiva para gestão financeira pessoal
 
 ## 📖 Índice
 
-- [Introdução](#introdução)
-- [Objetivo](#objetivo)
-- [Escopo](#escopo)
-- [Backlogs do Produto](#backlogs-do-produto)
-- [Cronograma](#cronograma)
-- [Materiais e Métodos](#materiais-e-métodos)
-- [Resultados](#resultados)
-- [Conclusão](#conclusão)
-- [Homologação do MVP](#homologação-do-mvp)
-- [Divulgação](#divulgação)
-- [Cartas](#cartas)
-- [Relato Individual](#relato-individual)
+- [Introdução](##introdução)
+- [Objetivo](##objetivo)
+- [Escopo](##escopo)
+- [Backlogs do Produto](##backlogs-do-produto)
+- [Cronograma](##cronograma)
+- [Materiais e Métodos](##materiais-e-métodos)
+- [Resultados](##resultados)
+- [Conclusão](##conclusão)
+- [Homologação do MVP](##homologação-do-mvp)
+- [Divulgação](##divulgação)
+- [Cartas](##cartas)
+- [Relato Individual](##relato-individual)
 
 ---
 
@@ -201,10 +201,12 @@ O FinFlow revolucionou a forma como os usuários gerenciam suas finanças, ofere
 ## 📄 Cartas
 
 ### Carta de Apresentação
-Disponível em `/docs/carta-apresentacao.pdf`
+![Carta de Apresentação](https://github.com/user-attachments/assets/d8622a92-e3f3-4ad9-afba-11080066adfb)
+
 
 ### Carta de Autorização
-Disponível em `/docs/carta-autorizacao.pdf`
+![Carta de Autorização](https://github.com/user-attachments/assets/6c0a4a0e-5672-4c68-8b92-6593df966af3)
+
 
 ---
 
